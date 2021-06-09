@@ -6,7 +6,7 @@ function calcIva(precio){
 }
 
 function calcImporte( precio ){
-  return parseInt(calcIva(precio) + precio);
+  return calcIva(precio) + precio;
 }
 
 const salida = calcImporte(200);
