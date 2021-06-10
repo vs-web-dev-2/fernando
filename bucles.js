@@ -9,7 +9,7 @@ for(let numero = 0 ; numero < 5 ; numero++){
 
 let contador = 0;
 
-whilte (contador < 10){
+while (contador < 10){
 
 
   console.log(contador)
