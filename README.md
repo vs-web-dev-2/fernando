@@ -8,3 +8,4 @@
 ## Datos Personales
 
 - _Madrid_  
+- [perfil twiter](https://twiter.com/albertobasalo)
