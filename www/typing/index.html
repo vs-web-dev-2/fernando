@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <meta charset="UTF-8" />
+    <title>Trabajos realizados</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Listado de prácticas" />
+    <meta name="keywords" content="curso, softtek, vector, frontend, practicas, ejercicios" />
+    <link rel="stylesheet" href="../styles/styles.css" >
+  </head>
+
+  <body>
+    
+    <header>
+      <h1>Primera App</h1>
+    </header>
+
+    <main>
+
+      <article>       
+        <p>Mensaje a buscar:</p>
+        <cite>buenos dias</cite>
+      </article>
+      <article>       
+        <form>
+          <label for="frase">Ves introduciendo letras</label>
+          <input type="text" id="frase" disabled />
+          <input type="button" id="miboton" value="Iniciar" />
+        </form>
+        <p id="mifrase">Pulsa Iniciar para empezar...</p>
+      </article>
+    
+    </main>
+    
+    <footer>
+      <p>Para Softtek y Vector por Fernando</p>
+    </footer>
+
+    <script>
+      let mifrase  = document.getElementById("mifrase");
+      let frase    = document.getElementById("frase");   
+      let miboton  = document.getElementById("miboton"); 
+      let cite     = document.querySelector("cite");
+      let fraseInicio = "Pulsa Iniciar para empezar...";
+      let fraseAux = "";
+      let inicio;
+      frase.addEventListener('input', function(event){      
+   
+        fraseAux = frase.value;    
+        let citeAux = cite.innerText;
+        const ahora = Date.now();
+        let tiempo = ahora - inicio; 
+        if ( fraseAux == citeAux ){
+          mifrase.classList.remove("rojo","azul")
+          mifrase.classList.add("verde")        
+          mifrase.innerText = "ACERTASTE"
+          frase.disabled = true;
+          frase.value = "";
+        }else{
+
+          if(citeAux.startsWith(fraseAux) ){
+            mifrase.innerText = "te queda pocooooooo " +  tiempo;
+            mifrase.classList.add("azul")
+            mifrase.classList.remove("rojo","verde")
+          }else{
+            mifrase.innerText = "no hijo nooooooooooooooo"            
+            mifrase.classList.remove("verde","azul")
+            mifrase.classList.add("rojo")
+          }
+        }
+
+     }, false);
+
+      miboton.addEventListener("click", function(e){         
+        frase.disabled = "";
+        mifrase.mifrase = fraseInicio;
+         inicio = Date.now();
+      }, false);
+
+
+    </script>
+  
+  </body>
+</html>

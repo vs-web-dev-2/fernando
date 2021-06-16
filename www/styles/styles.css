@@ -1,5 +1,11 @@
-a {
+a, cite {
   color:green;
 }
 
 h1{color:red}
+
+article{margin-bottom: 20px;}
+
+.rojo{color:red}
+.azul{color:blue}
+.verde{color:green}
