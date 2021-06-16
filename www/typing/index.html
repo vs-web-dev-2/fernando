@@ -13,7 +13,7 @@
   <body>
     
     <header>
-      <h1>Primera App</h1>
+      <h1>Primera App palomitera</h1>
     </header>
 
     <main>
@@ -74,7 +74,8 @@
 
       miboton.addEventListener("click", function(e){         
         frase.disabled = "";
-        mifrase.mifrase = fraseInicio;
+        mifrase.classList.remove("verde","azul" , "rojo")
+        mifrase.innerText = fraseInicio;
          inicio = Date.now();
       }, false);
 
